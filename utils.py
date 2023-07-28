@@ -14,7 +14,7 @@ from sklearn.metrics import confusion_matrix
 
 def read_config(yaml_path):
     with open(yaml_path,'r') as imf:
-        config = yaml.load(imf.read())
+        config = yaml.safe_load(imf.read())
     return config
 
 def save_checkpoint(state,config):
